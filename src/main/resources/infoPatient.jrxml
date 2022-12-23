@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.20.0.final using JasperReports Library version 6.20.0-2bc7ab61c56f459e8176eb05c7705e145cd400ad  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="infoPatient" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="acd79b47-b210-48bc-8726-44fd8e1d5c4a">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<property name="com.jaspersoft.studio.unit." value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageHeight" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.topMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.bottomMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.leftMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.rightMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnSpacing" value="pixel"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name=" numPatient" class="java.lang.String"/>
+	<field name="nom" class="java.lang.String"/>
+	<field name="prenom" class="java.lang.String"/>
+	<field name="addresse" class="java.lang.String"/>
+	<field name="telephone" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="208" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="88" width="555" height="89" backcolor="#4FC031" uuid="f99b0698-d3ff-47e3-a58e-b188610e3f61"/>
+				<graphicElement>
+					<pen lineWidth="0.0"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement x="40" y="118" width="470" height="46" uuid="c3d51357-621a-43bd-a93c-e102a605c022"/>
+				<textElement textAlignment="Center">
+					<font size="25" isBold="true"/>
+				</textElement>
+				<text><![CDATA[DOSSIER PATIENT]]></text>
+			</staticText>
+			<image>
+				<reportElement x="70" y="118" width="50" height="50" uuid="c5ce4e36-574c-4808-a93c-25202e660fde"/>
+				<imageExpression><![CDATA["C:/Users/User/Downloads/logo/logo-removebg-preview (1).png"]]></imageExpression>
+			</image>
+			<image>
+				<reportElement x="390" y="100" width="50" height="50" uuid="d11d8bc6-859f-4454-ac2e-727e5ef455d7"/>
+				<imageExpression><![CDATA["C:/Users/User/Downloads/logo/logo1-removebg-preview.png"]]></imageExpression>
+			</image>
+			<textField pattern="MMMMM dd, yyyy">
+				<reportElement x="0" y="10" width="100" height="30" uuid="f3fa31f2-cd64-4182-92b4-b658f9de3e67"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<textField pattern="HH:mm">
+				<reportElement x="10" y="30" width="100" height="30" uuid="9c1c31f2-acc0-4839-a7bb-915ea8942184"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="30" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="100" height="30" uuid="039948ed-1be7-4d7e-ab70-832198979504"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Numéro patient]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="110" y="0" width="100" height="30" uuid="6fd999bb-e7b6-4f84-970d-5449830a9fad"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Nom]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="210" y="0" width="100" height="30" uuid="9d06da1d-28bb-4098-be87-aabcdd04cb5f"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Prenom]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="330" y="0" width="100" height="30" uuid="f82b5026-3b29-40dd-9a57-0c3b35e27003"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Adresse]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="455" y="0" width="100" height="30" uuid="02b923d6-eb8f-429a-97f6-e7cbfc578266"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Téléphone]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="36" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="100" height="30" uuid="069f0a80-8c00-4bd9-8403-4dc4910100fb"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{ numPatient}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="90" y="0" width="100" height="30" uuid="745b82ef-0493-40ed-93e8-55bc96e0dd15"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{ numPatient}.toUpperCase()]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="200" y="0" width="100" height="30" uuid="13061170-629e-4aac-90d2-4bc6342a06e6"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{prenom}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="340" y="0" width="100" height="30" uuid="90cab4e5-5682-4612-8faa-cc7e554a9610"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{addresse}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="460" y="0" width="100" height="30" uuid="5a360b22-cf2b-4645-8810-33b5f04dd020"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{telephone}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
